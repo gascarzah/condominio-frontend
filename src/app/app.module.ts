@@ -18,7 +18,6 @@ import { VehiculoEdicionComponent } from './pages/vehiculo/vehiculo-edicion/vehi
 import { TorreEdicionComponent } from './pages/torre/torre-edicion/torre-edicion.component';
 import { DepartamentoEdicionComponent } from './pages/departamento/departamento-edicion/departamento-edicion.component';
 import { CocheraEdicionComponent } from './pages/cochera/cochera-edicion/cochera-edicion.component';
-import { HistoriaClinicaEdicionComponent } from './pages/historia-clinica/historia-clinica-edicion/historia-clinica-edicion.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +32,7 @@ import { HistoriaClinicaEdicionComponent } from './pages/historia-clinica/histor
     TorreEdicionComponent,
     DepartamentoEdicionComponent,
     CocheraEdicionComponent,
-    HistoriaClinicaEdicionComponent
+
   ],
   imports: [
     BrowserModule,
