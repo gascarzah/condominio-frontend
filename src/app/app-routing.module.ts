@@ -1,15 +1,31 @@
-import { VehiculoComponent } from './pages/vehiculo/vehiculo.component';
-import { TorreComponent } from './pages/torre/torre.component';
-import { CocheraComponent } from './pages/cochera/cochera.component';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PersonaComponent } from './pages/persona/persona.component';
+import { Error404PageComponent } from './shared/pages/error404-page/error404-page.component';
+
 
 const routes: Routes = [
-  {path: 'persona', component: PersonaComponent},
-  {path: 'cochera', component: CocheraComponent},
-  {path: 'torre', component: TorreComponent},
-  {path: 'vehiculo', component: VehiculoComponent}
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+  },
+  {
+    path: 'condominio',
+    loadChildren: () => import('./condominio/condominio.module').then(m => m.CondominioModule)
+  },
+  {
+    path: '404',
+    component: Error404PageComponent
+  },
+  {
+    path: '',
+    redirectTo: 'condominio',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    redirectTo: '404'
+  }
 ];
 
 @NgModule({
